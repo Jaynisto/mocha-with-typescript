@@ -1,4 +1,4 @@
-import GreetIn from "./greetin";
+import GreetIn from "../interfaces/greetin";
 
 export default class GreetInJapan implements GreetIn {
     greet(name: string): string {

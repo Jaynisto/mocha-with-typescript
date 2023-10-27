@@ -1,13 +1,15 @@
 import  assert  from 'assert'
 import GreetIn  from '../interfaces/greetin'
-import GreetInXhosa from '../interfaces/GreetInXhosa'
-import GreetInAfrikaans from '../interfaces/GreetInAfrikaans'
-import GreetInEnglish from '../interfaces/GreetInEnglish'
-import GreetInZulu from '../interfaces/GreetInZulu'
-import GreetInSotho from '../interfaces/GreetInSotho'
-import GreetInTswana from '../interfaces/GreetInTswana'
-import GreetInVenda from '../interfaces/GreetInVenda'
-import GreetInJapan from '../interfaces/GreetInJapan'
+import GreetInXhosa from '../classes/GreetInXhosa'
+import GreetInAfrikaans from '../classes/GreetInAfrikaans'
+import GreetInEnglish from '../classes/GreetInEnglish'
+import GreetInZulu from '../classes/GreetInZulu'
+import GreetInSotho from '../classes/GreetInSotho'
+import GreetInTswana from '../classes/GreetInTswana'
+import GreetInVenda from '../classes/GreetInVenda'
+import GreetInJapan from '../classes/GreetInJapan'
+import GreetInFrench from '../classes/GreetInFrench'
+import GreetInSpanish from '../classes/GreetInSpanish'
 
 
 describe("My Xhosa Greeting Function.", () => {
@@ -81,5 +83,23 @@ describe("My Japanese Greeting Function.", () => {
         const greeter : GreetIn = new GreetInJapan();
         const greeting = greeter.greet(name)
         assert.equal("Konnichiwa, Fanie!", greeting);
+    })
+})
+
+describe("My French Greeting Function.", () => {
+    it("It should return a French Greeting.", () => {
+        const name = "Fanie"
+        const greeter : GreetIn = new GreetInFrench();
+        const greeting = greeter.greet(name)
+        assert.equal("Bonjour, Fanie!", greeting);
+    })
+})
+
+describe("My Spanish Greeting Function.", () => {
+    it("It should return a Spanish Greeting.", () => {
+        const name = "Fanie"
+        const greeter : GreetIn = new GreetInSpanish();
+        const greeting = greeter.greet(name)
+        assert.equal("¡Hola, Fanie!", greeting);
     })
 })

@@ -1,6 +1,5 @@
-import GreetIn from "./greetin";
+import GreetIn from "../interfaces/greetin";
 
-// GreetInEnglish.ts
 export default class GreetInEnglish implements GreetIn {
     greet(name: string): string {
         return `Hello, ${name}!`;

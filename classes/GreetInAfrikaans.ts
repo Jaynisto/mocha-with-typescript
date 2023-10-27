@@ -1,6 +1,5 @@
-import GreetIn from './greetin'
+import GreetIn from '../interfaces/greetin'
 
-// GreetInAfrikaans.ts
 export default class GreetInAfrikaans implements GreetIn {
     greet(name: string): string {
         return `Goeie more, ${name}!`;

@@ -1,5 +1,13 @@
 export enum language {
-    afr,
-    eng,
-    xhosa
+    afrikaans,
+    english,
+    xhosa,
+    japanese,
+    sesotho,
+    tswana,
+    venda,
+    zulu,
+    french,
+    spanish
+    
 }
