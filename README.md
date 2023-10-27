@@ -1,1 +1,1 @@
-# Testing Typescripts With Mocha
+# Testing Typescript With Mocha

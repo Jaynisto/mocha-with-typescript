@@ -10,96 +10,127 @@ import GreetInVenda from '../classes/GreetInVenda'
 import GreetInJapan from '../classes/GreetInJapan'
 import GreetInFrench from '../classes/GreetInFrench'
 import GreetInSpanish from '../classes/GreetInSpanish'
+import { language } from '../language'
+import { Greeter } from '../greet'
 
 
-describe("My Xhosa Greeting Function.", () => {
+describe("GreetInXhosa Function.", () => {
     it("It should return a Xhosa Greeting.", () => {
-        const name = "Fanie"
-        const greeter : GreetIn = new GreetInXhosa();
-        const greeting = greeter.greet(name)
-        assert.equal("Molo, Fanie!", greeting);
+        let greetMap = new Map<language, GreetIn>()
+        greetMap.set(language.xhosa, new GreetInXhosa());
+
+        let greeter = new Greeter(greetMap)
+        const userName = "Fanie"
+        let xhosaFunction = greeter.greet(userName, language.xhosa)
+        assert.equal("Molo, Fanie!", xhosaFunction);
     })
 })
 
-describe("My Afrikaans Greeting Function.", () => {
+describe("GreetInAfrikaans Function.", () => {
     it("It should return an Afrikaans Greeting.", () => {
-        const name = "Fanie"
-        const greeter : GreetIn = new GreetInAfrikaans();
-        const greeting = greeter.greet(name)
-        assert.equal("Goeie more, Fanie!", greeting);
+        let greetMap = new Map<language, GreetIn>()
+        greetMap.set(language.afrikaans, new GreetInAfrikaans());
+
+        let greeter = new Greeter(greetMap)
+        const userName = "Fanie"
+        let afrikaansFunction = greeter.greet(userName, language.afrikaans)
+        assert.equal("Goeie more, Fanie!", afrikaansFunction);
     })
 })
 
-describe("My English Greeting Function.", () => {
+describe("GreetInEnglish Function.", () => {
     it("It should return an English Greeting.", () => {
-        const name = "Fanie"
-        const greeter : GreetIn = new GreetInEnglish();
-        const greeting = greeter.greet(name)
-        assert.equal("Hello, Fanie!", greeting);
+        let greetMap = new Map<language, GreetIn>()
+        greetMap.set(language.english, new GreetInEnglish());
+
+        let greeter = new Greeter(greetMap)
+        const userName = "Fanie"
+        let englishFunction = greeter.greet(userName, language.english)
+        assert.equal("Hello, Fanie!", englishFunction);
     })
 })
 
-describe("My Zulu Greeting Function.", () => {
+describe("GreetInZulu Function.", () => {
     it("It should return a Zulu Greeting.", () => {
-        const name = "Fanie"
-        const greeter : GreetIn = new GreetInZulu();
-        const greeting = greeter.greet(name)
-        assert.equal("Sawubona, Fanie!", greeting);
+        let greetMap = new Map<language, GreetIn>()
+        greetMap.set(language.zulu, new GreetInZulu());
+
+        let greeter = new Greeter(greetMap)
+        const userName = "Fanie"
+        let zuluFunction = greeter.greet(userName, language.zulu)
+        assert.equal("Sawubona, Fanie!", zuluFunction);
     })
 })
 
-describe("My Sotho Greeting Function.", () => {
+describe("GreetInSotho Function.", () => {
     it("It should return a Sotho Greeting.", () => {
-        const name = "Fanie"
-        const greeter : GreetIn = new GreetInSotho();
-        const greeting = greeter.greet(name)
-        assert.equal("Dumela, Fanie!", greeting);
+        let greetMap = new Map<language, GreetIn>()
+        greetMap.set(language.sesotho, new GreetInSotho());
+
+        let greeter = new Greeter(greetMap)
+        const userName = "Fanie"
+        let sothoFunction = greeter.greet(userName, language.sesotho)
+        assert.equal("Dumela, Fanie!", sothoFunction);
     })
 })
 
-describe("My Tswana Greeting Function.", () => {
+describe("GreetInTswana Function.", () => {
     it("It should return a Tswana Greeting.", () => {
-        const name = "Fanie"
-        const greeter : GreetIn = new GreetInTswana();
-        const greeting = greeter.greet(name)
-        assert.equal("Dumela, Fanie!", greeting);
+        let greetMap = new Map<language, GreetIn>()
+        greetMap.set(language.tswana, new GreetInTswana());
+
+        let greeter = new Greeter(greetMap)
+        const userName = "Fanie"
+        let tswanaFunction = greeter.greet(userName, language.tswana)
+        assert.equal("Dumela, Fanie!", tswanaFunction);
     })
 })
 
-describe("My Venda Greeting Function.", () => {
+describe("GreetInVenda Function.", () => {
     it("It should return a Venda Greeting.", () => {
-        const name = "Fanie"
-        const greeter : GreetIn = new GreetInVenda();
-        const greeting = greeter.greet(name)
-        assert.equal("Ndaa, Fanie!", greeting);
+        let greetMap = new Map<language, GreetIn>()
+        greetMap.set(language.venda, new GreetInVenda());
+
+        let greeter = new Greeter(greetMap)
+        const userName = "Fanie"
+        let vendaFunction = greeter.greet(userName, language.venda)
+        assert.equal("Ndaa, Fanie!", vendaFunction);
     })
 })
 
-
-
-describe("My Japanese Greeting Function.", () => {
+describe("GreetInJapanese Function.", () => {
     it("It should return a Japanese Greeting.", () => {
-        const name = "Fanie"
-        const greeter : GreetIn = new GreetInJapan();
-        const greeting = greeter.greet(name)
-        assert.equal("Konnichiwa, Fanie!", greeting);
+        let greetMap = new Map<language, GreetIn>()
+        greetMap.set(language.japanese, new GreetInJapan());
+
+        let greeter = new Greeter(greetMap)
+        const userName = "Fanie"
+        let japaneseFunction = greeter.greet(userName, language.japanese)
+        assert.equal("Konnichiwa, Fanie!", japaneseFunction);
     })
 })
 
-describe("My French Greeting Function.", () => {
+describe("GreetInFrench Function.", () => {
     it("It should return a French Greeting.", () => {
-        const name = "Fanie"
-        const greeter : GreetIn = new GreetInFrench();
-        const greeting = greeter.greet(name)
-        assert.equal("Bonjour, Fanie!", greeting);
+        let greetMap = new Map<language, GreetIn>()
+        greetMap.set(language.french, new GreetInFrench());
+
+        let greeter = new Greeter(greetMap)
+        const userName = "Fanie"
+        let frenchFunction = greeter.greet(userName, language.french)
+        assert.equal("Bonjour, Fanie!", frenchFunction);
     })
 })
 
-describe("My Spanish Greeting Function.", () => {
+describe("GreetInSpanish Function.", () => {
     it("It should return a Spanish Greeting.", () => {
-        const name = "Fanie"
-        const greeter : GreetIn = new GreetInSpanish();
-        const greeting = greeter.greet(name)
-        assert.equal("¡Hola, Fanie!", greeting);
+        let greetMap = new Map<language, GreetIn>()
+        greetMap.set(language.spanish, new GreetInSpanish ());
+
+        let greeter = new Greeter(greetMap)
+        const userName = "Fanie"
+        let spanishFunction = greeter.greet(userName, language.spanish)
+        assert.equal("¡Hola, Fanie!", spanishFunction);
+        assert.equal("", greeter.greet(userName, language.fr));
     })
 })
