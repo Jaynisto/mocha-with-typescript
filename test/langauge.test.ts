@@ -6,6 +6,8 @@ import GreetInEnglish from '../interfaces/GreetInEnglish'
 import GreetInZulu from '../interfaces/GreetInZulu'
 import GreetInSotho from '../interfaces/GreetInSotho'
 import GreetInTswana from '../interfaces/GreetInTswana'
+import GreetInVenda from '../interfaces/GreetInVenda'
+import GreetInJapan from '../interfaces/GreetInJapan'
 
 
 describe("My Xhosa Greeting Function.", () => {
@@ -54,10 +56,30 @@ describe("My Sotho Greeting Function.", () => {
 })
 
 describe("My Tswana Greeting Function.", () => {
-    it("It should return a Sotho Greeting.", () => {
+    it("It should return a Tswana Greeting.", () => {
         const name = "Fanie"
         const greeter : GreetIn = new GreetInTswana();
         const greeting = greeter.greet(name)
         assert.equal("Dumela, Fanie!", greeting);
+    })
+})
+
+describe("My Venda Greeting Function.", () => {
+    it("It should return a Venda Greeting.", () => {
+        const name = "Fanie"
+        const greeter : GreetIn = new GreetInVenda();
+        const greeting = greeter.greet(name)
+        assert.equal("Ndaa, Fanie!", greeting);
+    })
+})
+
+
+
+describe("My Japanese Greeting Function.", () => {
+    it("It should return a Japanese Greeting.", () => {
+        const name = "Fanie"
+        const greeter : GreetIn = new GreetInJapan();
+        const greeting = greeter.greet(name)
+        assert.equal("Konnichiwa, Fanie!", greeting);
     })
 })
