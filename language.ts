@@ -9,5 +9,5 @@ export enum language {
     zulu,
     french,
     spanish
-    
+  
 }
