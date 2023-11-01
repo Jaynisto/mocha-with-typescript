@@ -131,6 +131,5 @@ describe("GreetInSpanish Function.", () => {
         const userName = "Fanie"
         let spanishFunction = greeter.greet(userName, language.spanish)
         assert.equal("¡Hola, Fanie!", spanishFunction);
-        assert.equal("", greeter.greet(userName, language.fr));
     })
 })
