@@ -10,7 +10,7 @@ import GreetInVenda from '../classes/GreetInVenda'
 import GreetInJapan from '../classes/GreetInJapan'
 import GreetInFrench from '../classes/GreetInFrench'
 import GreetInSpanish from '../classes/GreetInSpanish'
-import { language } from '../language'
+import { language } from '../enums/language'
 import { Greeter } from '../greet'
 
 

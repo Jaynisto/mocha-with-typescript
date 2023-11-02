@@ -1,5 +1,5 @@
 import GreetIn from './interfaces/greetin';
-import { language } from './language'
+import { language } from './enums/language'
 
 export class Greeter {
     private greetLanguages : Map< language, GreetIn>
